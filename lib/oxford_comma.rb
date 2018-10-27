@@ -2,7 +2,12 @@ def oxford_comma(array)
   if array.length == 1
     string = array.join
     string
-  pop = array.pop
-  string = array.join(", ")
-  string + ", and " + pop
+  elsif array.length == 2
+    string = array.join(" and ")
+    string
+  else
+    pop = array.pop
+    string = array.join(", ")
+    string + ", and " + pop
+  end
 end
